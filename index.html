@@ -40,12 +40,13 @@
   <h1>
     Useful Info
   </h1>
-<div class="w3-bar w3-black">
-  <button class="w3-bar-item w3-button" onclick="openCity('Stipend')">Stipend</button>
-  <button class="w3-bar-item w3-button" onclick="openCity('Before You Arrive')">Before You Arrive</button>
-  <button class="w3-bar-item w3-button" onclick="openCity('After You Arrive')">After You Arrive</button>
-  <button class="w3-bar-item w3-button" onclick="openCity('Taxes')">Taxes</button>
-  <button class="w3-bar-item w3-button" onclick="openCity('Accomodation')">Accomodation</button>
+<div class="w3-bar">
+  <button class="w3-bar-item w3-button w3-dark-gray" onclick="openCity('Stipend')">Stipend</button>
+  <button class="w3-bar-item w3-button w3-red" onclick="openCity('Before You Arrive')">Before You Arrive</button>
+  <button class="w3-bar-item w3-button w3-dark-gray" onclick="openCity('After You Arrive')">After You Arrive</button>
+  <button class="w3-bar-item w3-button w3-red" onclick="openCity('Taxes')">Taxes</button>
+  <button class="w3-bar-item w3-button w3-dark-gray" onclick="openCity('Accomodation')">Accomodation</button>
+  <button class="w3-bar-item w3-button w3-red" onclick="openCity('Social')">Social</button>
 </div>
 
 <div id="Stipend" class="w3-container city" style="display:none">
@@ -115,6 +116,25 @@ Most fellows will want to use public transportation.  The NIH campus is at the M
 </p><p>(Other NIH specific: no one uses this: <a href="http://www.fedesp.com/classifieds/">http://www.fedesp.com/classifieds/</a> )
 </p>
 </body>
+
+<div id="Social" class="w3-container city" style="display:none">
+  <h2>
+    Social & Extra
+  </h2>
+<body>
+  <p>
+    Societies at the NIH still use archaic listservs to communicate (expect a lot of spam), but some clubs have information buried within here: <a href="http://govemployee.com/nih/">http://govemployee.com/nih/</a>  (also offers discounts, and on-site gym membership)
+    Typically, the best thing to do is ask around, feel free to contact us if you’re interested in a particular club.</p>
+    <h4>Fellow-L</h4>
+    Socials and stuff: Sign up by emailing listserv _at_ list.nih.gov with 'Subscribe FELLOW-L' (without quotes) in the body of the message.
+        <p>Fellows Advisory Committee: We’re committed to helping all NHLBI fellows have a fulfilling experience here, and any contributions are always welcome and join the team!
+  </p><h4>Online NIH Talks: </h4>
+    <p><a href="https://videocast.nih.gov/">https://videocast.nih.gov/</a></p>
+    <p><a href="https://calendar.nih.gov/app/MCalWelcome.aspx">https://calendar.nih.gov/app/MCalWelcome.aspx</a></p>
+
+</body>
+</div>
+
 
 <body>
 <div id='map'></div>
