@@ -3,282 +3,745 @@
 <title>NHBLI_FAC</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-<link rel="shortcut icon" href="">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-<script src="fellowData.js"></script>
-<script src="metro_red2.js"></script>
 <style>
-  #map {
-    width: 600px;
-    height: 400px;
-    max-width: 75%;
-  }
-  .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+    #map {
+        min-width: 350px;
+        max-height: 540px;
+width: 100%;
+
+    }
+
+    #logo_n {
+        left: 900px;
+        top: 10px;
+        position: absolute;
+        height: 60px;
+    }
+    .buttondropdown{width:400px;}
 </style>
 <div class="accordion">
-<body>
 
-<div class="w3-container">
-  <body>
-  <h1>
-    Welcome to the NHLBI!
+    <body>
+
+        <h1>
+    Welcome to the National Heart Lung & Blood Institute! <!--img id="logo_n" src="C:\Users\ramasawmyr\Documents\2016\FAC\Website\uNHLBI_logo.png" alt="nhlbi_logo" align="right"-->
   </h1>
-    <p>The Office of Education and the Fellows Advisory Committee welcome you as a future fellow in the Division of Intramural Research at the National Heart, Lung, and Blood Institute (NHLBI) of NIH. </p>
-    <p>As a Fellow, you will join a community of over 300 Postdoctoral Fellows whose research spans everything from molecular modeling to clinical studies. The Fellows Advisory Committee (FAC) has put together the following information for future fellows to help their transition; in addition we have a ‘buddy’ system to help you if you have any further questions: please contact rajiv.ramasawmy@nih.gov. </p>
-    <p><strong>The information presented here is a gentle introduction </strong>, for more specific cases and information consult the links provided. We’ve tried to condense the information here, and minimize paragraphs of links, but if you prefer information overload and hundreds of tabs go to: <a href="https://www.training.nih.gov/assets/Moving_Guide.pdf">https://www.training.nih.gov/assets/Moving_Guide.pdf</a> </p>
+        <div class="w3-container w3-light-gray">
 
-    <p>Herbert Geller</p>
-    <p>NHLBI Office of Education</p>
-    <p><a href="https://www.nhlbi.nih.gov/research/intramural/education">https://www.nhlbi.nih.gov/research/intramural/education</a></p>
+            <body>
 
-  </p>
-  </body>
-</div>
+                <p>The Office of Education and the Fellows Advisory Committee welcome you as a future fellow in the Division of Intramural Research at the National Heart, Lung, and Blood Institute (NHLBI) of NIH. </p>
+                <p>As a Fellow, you will join a community of over 300 Postdoctoral Fellows whose research spans everything from molecular modeling to clinical studies. The Fellows Advisory Committee (FAC) has put together the following information for future
+                    fellows to help their transition; in addition we have a ‘buddy’ system to help you if you have any further questions: please contact rajiv.ramasawmy@nih.gov. </p>
+                <p><strong>The information presented here is a gentle introduction </strong>, for more specific cases and information consult the links provided. We’ve tried to condense the information here, and minimize paragraphs of links, but if you prefer
+                    information overload and hundreds of tabs go to: <a href="https://www.training.nih.gov/assets/Moving_Guide.pdf">https://www.training.nih.gov/assets/Moving_Guide.pdf</a> </p>
 
-<div class="w3-container">
-  <h1>
+                <p>Herbert Geller</p>
+                <p>NHLBI Office of Education</p>
+                <p><a href="https://www.nhlbi.nih.gov/research/intramural/education">https://www.nhlbi.nih.gov/research/intramural/education</a></p>
+
+                </p>
+            </body>
+        </div>
+
+        <div class="w3-container">
+            <h1>
     Useful Info
   </h1>
-<div class="w3-bar">
-  <button class="w3-bar-item w3-button w3-dark-gray" onclick="openCity('Stipend')">Stipend</button>
-  <button class="w3-bar-item w3-button w3-red" onclick="openCity('Before You Arrive')">Before You Arrive</button>
-  <button class="w3-bar-item w3-button w3-dark-gray" onclick="openCity('After You Arrive')">After You Arrive</button>
-  <button class="w3-bar-item w3-button w3-red" onclick="openCity('Taxes')">Taxes</button>
-  <button class="w3-bar-item w3-button w3-dark-gray" onclick="openCity('Accomodation')">Accomodation</button>
-  <button class="w3-bar-item w3-button w3-red" onclick="openCity('Social')">Social</button>
-</div>
+            <div class="w3-bar">
+                <button class="w3-bar-item w3-button w3-dark-gray" onclick="openTabRR('Before You Arrive')">Before You Arrive</button>
+                <button class="w3-bar-item w3-button w3-red" onclick="openTabRR('After You Arrive')">After You Arrive</button>
+                <button class="w3-bar-item w3-button w3-dark-gray" onclick="openTabRR('Stipend')">Stipend</button>
+                <button class="w3-bar-item w3-button w3-red" onclick="openTabRR('Taxes')">Taxes</button>
+                <button class="w3-bar-item w3-button w3-dark-gray" onclick="openTabRR('Accomodation')">Accomodation</button>
+                <button class="w3-bar-item w3-button w3-red" onclick="openTabRR('Social')">Social</button>
+            </div>
 
-<div id="Stipend" class="w3-container city" style="display:none">
-  <h2>Stipend</h2>
-  <body>
+            <div id="Stipend" class="w3-container tabRR w3-light-gray" style="display:none">
+                <h2>Stipend</h2>
 
-    <p>
-    If you are an IRTA Fellow or a Visiting Fellow, you will receive your pay monthly on the first weekday of each month.  This is automatically deposited to your bank account.  Fellows arriving from overseas will need to open a bank account to receive this payment.
+                <body>
 
-    Stipends start from $43k, but are subject to each PI, and can be increased through experience, academic output and internal grant applications.
-  </p>
-  <p>
-     <a href="http://grants.nih.gov/grants/guide/notice-files/NOT-OD-16-047.html"> Official stipend information </a>
-  </p>
-  </body>
-</div>
+                    <p>
+                        If you are an IRTA Fellow or a Visiting Fellow, you will receive your pay monthly on the first weekday of each month. This is automatically deposited to your bank account. Fellows arriving from overseas will need to open a bank account to receive this
+                        payment. Stipends start from $43k, but are subject to each PI, and can be increased through experience, academic output and internal grant applications.
+                    </p>
+                    <p>
+                        <a href="http://grants.nih.gov/grants/guide/notice-files/NOT-OD-16-047.html"> Official stipend information </a>
+                    </p>
+                    <p>
+                        In addition to the stipend, fellows receive health insurance with <a href="https://faes.org/content/health-insurance-services"> CoreSource </a> (though not including dental insurance) and a travel subsisdy <a href="https://www.ors.od.nih.gov/pes/dats/Transhare/Pages/transhare.aspx"> (Transhare) </a>.
+                    </p>
 
-<div id="Before You Arrive" class="w3-container city" style="display:none">
-  <h2>Before You Arrive</h2>
-  <p>
-    Bring enough cash or get a travel cash card, for the first few weeks of living costs.
-    Most importantly have on the order of $5000 available money for the deposit and first month’s rent, it may be easier to transfer directly from internet services such as PayPal or TransferWise rather than carry this much cash (checks are virtually phased out nowadays)!
-  </p><p>Fellows may apply for a $2000 advance to help them with the first month, but that can take a couple of weeks to come through (Contact your Administrative Officer).</p?>
-  </p>
-</div>
+                </body>
+            </div>
 
-<div id="After You Arrive" class="w3-container city" style="display:none">
-  <h2>After You Arrive</h2>
-  <p>
-      Some banks (e.g. PNC) may accept applications for a checking account without a SSN (on the assumption you will receive one soon), though this might be difficult for some individuals.
-      The NIH has its own Federal credit union (NIHFCU), which can offer checking and credit accounts for incoming fellows.
-    </p>
-    <p>
-      Be aware that ATMs will charge you for ‘foreign’ bank withdrawals, but credit unions partner with each other and a few other interbank networks to offer withdrawals free-of-charge (e.g. NIHFCU customers have free withdrawals at Navy FCU or Allpoint ATMs).
-  </p><p>
-      For more information visit: <a href="https://www.nihfcu.org/">https://www.nihfcu.org/</a>
-    </p>
-</div>
-</div>
+            <div id="Before You Arrive" class="w3-container tabRR w3-light-gray">
+                <h2>Before You Arrive</h2>
 
-<div id="Taxes" class="w3-container city" style="display:none">
-  <h2>Taxes</h2>
-  <p>
-    The USA prides itself on having the most complex taxation system in the world. The Division of International Services (DIS) offers tax courses to guide you through this, and also can be communicated with for specific questions. Here is a brief overview:
-  </p><p>In the USA, the tax year is from Jan 1st – Dec 31st, and the deadline for returns are filed around mid-April. Some countries have a tax-treaty with the US meaning you don’t have to pay Federal tax whilst on a exchange visa. Note: if you arrive Nov 2016, then you are seen by the IRS as having used up 2016 as the tax exemption year!
-    </p><p>Even if you are not yet a permanent resident (i.e. Green Card holder), you are still considered a resident FOR TAX PURPOSES if you have lived in the USA for 2 years or more.
-    </p><p>In the USA, you generally pay income tax to the country’s government (the IRS) and the state’s government (e.g. Maryland, DC, or Virginia). In some cases you have to pay the local county’s government (e.g. Montgomery County) or the city’s government (e.g. Baltimore city). The forms for the IRS are called “1040” and are the same regardless of where you live. The forms for the state, county, and city depend on where you live, not where you work; for example, if you work in Bethesda, MD but live in DC then you will pay state tax to DC.
-    </p><p>You will also need to report other sources of income on your taxes. For example, if you have investments earning interest such as a savings account, even if it is a small amount of money, you will need a statement from your bank with the interest income tax information.
-    </p><p>Slides also available here: <a href="https://www.ors.od.nih.gov/pes/dis/VisitingScientists/Pages/Taxes.aspx">https://www.ors.od.nih.gov/pes/dis/VisitingScientists/Pages/Taxes.aspx</a>
-  </p>
-</div>
-</div>
+                <body>
+                    <p>
+                        Bring enough cash or get a travel cash card, for the first few weeks of living costs. Most importantly have on the order of $5000 available money for the deposit and first month’s rent, it may be easier to transfer directly from internet services such
+                        as PayPal or TransferWise rather than carry this much cash (checks are virtually phased out nowadays)!
+                    </p>
+                    <p>Fellows may apply for a $2000 advance to help them with the first month, but that can take a couple of weeks to come through (Contact your Administrative Officer).</p?>
+                    </p>
+                </body>
+            </div>
 
-<div id="Accomodation" class="w3-container city" style="display:none">
-  <h1>
-    Accomodation
-  </h1>
+            <div id="After You Arrive" class="w3-container tabRR w3-light-gray" style="display:none">
+                <h2>After You Arrive</h2>
 
-  <p>
-    The NHLBI Labs are located on the NIH campus in Bethesda, Maryland (yellow star on the map). Bethesda is a suburb near the Washington, DC area. There is no "NIH Housing", so fellows must find housing on their own.
-This section is based on renting houses, for other information on buying houses, here is some NIH info: <a href="https://hr.od.nih.gov/workingatnih/executive/recruit/homes.htm">https://hr.od.nih.gov/workingatnih/executive/recruit/homes.htm </a>
-</p><p>One bedroom apartments typcially will rent for $1400+/month, while two bedroom apartments will rent for $1800+/month, depending on the location.
-Most fellows will want to use public transportation.  The NIH campus is at the Medical Center station on the Red Line of the Washington Metro.
-</p><p>There are many places to rent near other Red Line stations.  Rentals are cheaper on the Red Line as you go more north of the campus, and more expensive south, towards the center of Washington DC.
-</p><p>Most popular: <a href="https://washingtondc.craigslist.org/">https://washingtondc.craigslist.org/</a>
-</p><p>NIH specific listings: <a href="http://nih.samslist.us/">http://nih.samslist.us/</a>
-</p><p>(Other NIH specific: no one uses this: <a href="http://www.fedesp.com/classifieds/">http://www.fedesp.com/classifieds/</a> )
-</p>
-</body>
-</div>
+                <body>
+                    <p>
+                        Some banks (e.g. PNC) may accept applications for a checking account without a SSN (on the assumption you will receive one soon), though this might be difficult for some individuals. The NIH has its own Federal credit union (NIHFCU), which can offer checking
+                        and credit accounts for incoming fellows.
+                    </p>
+                    <p>
+                        Be aware that ATMs will charge you for ‘foreign’ bank withdrawals, but credit unions partner with each other and a few other interbank networks to offer withdrawals free-of-charge (e.g. NIHFCU customers have free withdrawals at Navy FCU or Allpoint ATMs).
+                    </p>
+                    <p>
+                        For more information visit: <a href="https://www.nihfcu.org/">https://www.nihfcu.org/</a>
+                    </p>
+                </body>
+            </div>
 
-<div id="Social" class="w3-container city" style="display:none">
-  <h2>
+
+            <div id="Taxes" class="w3-container tabRR w3-light-gray" style="display:none">
+                <h2>Taxes</h2>
+
+                <body>
+                    <p>
+                        The USA prides itself on having the most complex taxation system in the world. The Division of International Services (DIS) offers tax courses to guide you through this, and also can be communicated with for specific questions. Here is a brief overview:
+                    </p>
+                    <p>In the USA, the tax year is from Jan 1st – Dec 31st, and the deadline for returns are filed around mid-April. Some countries have a tax-treaty with the US meaning you don’t have to pay Federal tax whilst on a exchange visa. Note: if
+                        you arrive Nov 2016, then you are seen by the IRS as having used up 2016 as the tax exemption year!
+                    </p>
+                    <p>Even if you are not yet a permanent resident (i.e. Green Card holder), you are still considered a resident FOR TAX PURPOSES if you have lived in the USA for 2 years or more.
+                    </p>
+                    <p>In the USA, you generally pay income tax to the country’s government (the IRS) and the state’s government (e.g. Maryland, DC, or Virginia). In some cases you have to pay the local county’s government (e.g. Montgomery County) or the
+                        city’s government (e.g. Baltimore city). The forms for the IRS are called “1040” and are the same regardless of where you live. The forms for the state, county, and city depend on where you live, not where you work; for example,
+                        if you work in Bethesda, MD but live in DC then you will pay state tax to DC. These state taxes are paid quarterly, typically through the states online system - there is a large fine if you dont!
+                    </p>
+                    <p>You will also need to report other sources of income on your taxes. For example, if you have investments earning interest such as a savings account, even if it is a small amount of money, you will need a statement from your bank with
+                        the interest income tax information.
+                    </p>
+                    <p>Slides also available here: <a href="https://www.ors.od.nih.gov/pes/dis/VisitingScientists/Pages/Taxes.aspx">https://www.ors.od.nih.gov/pes/dis/VisitingScientists/Pages/Taxes.aspx</a>
+                    </p>
+                </body>
+            </div>
+
+            <div id="Social" class="w3-container tabRR w3-light-gray" style="display:none">
+                <h2>
     Social & Extra
   </h2>
+
+                <body>
+                    <p>
+                        Societies at the NIH still use archaic listservs to communicate (expect a lot of spam), but some clubs have information buried within here: <a href="http://govemployee.com/nih/">http://govemployee.com/nih/</a> (also offers discounts,
+                        and on-site gym membership) Typically, the best thing to do is ask around, feel free to contact us if you’re interested in a particular club.</p>
+                    <p>Occasional events here at the visiting fellows page: http://visitingfellows.tumblr.com/</p>
+
+                    <h4>Fellow-L</h4> Socials and stuff: Sign up by emailing listserv _at_ list.nih.gov with 'Subscribe FELLOW-L' (without quotes) in the body of the message.
+                    <p>Fellows Advisory Committee: We’re committed to helping all NHLBI fellows have a fulfilling experience here, and any contributions are always welcome and join the team!
+                    </p>
+                    <h4>Online NIH Talks: </h4>
+                    <p><a href="https://videocast.nih.gov/">https://videocast.nih.gov/</a></p>
+                    <p><a href="https://calendar.nih.gov/app/MCalWelcome.aspx">https://calendar.nih.gov/app/MCalWelcome.aspx</a></p>
+
+                </body>
+            </div>
+
+            <div id="Accomodation" class="w3-container tabRR w3-light-gray" style="display:none">
+                <h2>Accomodation</h2>
+
+                <body>
+                    <p>
+                        The NHLBI Labs are located on the NIH campus in Bethesda, Maryland (yellow star on the map). Bethesda is a suburb near the Washington, DC area. There is no "NIH Housing", so fellows must find housing on their own. This section is based on renting houses,
+                        for other information on buying houses, here is some NIH info: <a href="https://hr.od.nih.gov/workingatnih/executive/recruit/homes.htm">https://hr.od.nih.gov/workingatnih/executive/recruit/homes.htm </a>
+                    </p>
+                    <p>One bedroom apartments typcially will rent for $1400+/month, while two bedroom apartments will rent for $1800+/month, depending on the location. Most fellows will want to use public transportation. The NIH campus is at the Medical
+                        Center station on the Red Line of the Washington Metro.
+                    </p>
+                    <p>There are many places to rent near other Red Line stations. Rentals are cheaper on the Red Line as you go more north of the campus, and more expensive south, towards the center of Washington DC.
+                    </p>
+                    <p>Most popular: <a href="https://washingtondc.craigslist.org/">https://washingtondc.craigslist.org/</a>
+                    </p>
+                    <p>NIH specific listings: <a href="http://nih.samslist.us/">http://nih.samslist.us/</a>
+                    </p>
+                    <p>(Other NIH specific: no one uses this: <a href="http://www.fedesp.com/classifieds/">http://www.fedesp.com/classifieds/</a> )
+                    </p>
+                </body>
+                <!-- map went here -->
+                <!--<div id='map'></div>-->
+
+
+                <table width=100% align=left >
+                    <tr>
+                        <td width=50% valign=top>
+                            <figure>
+                                <img id="map" src="https://github.com/rajramasawmy/hello-world/blob/master/Hyperlink_wMetro_NIH.jpg?raw=true" alt="Heatmap">
+                                <!--<img src="https://github.com/rajramasawmy/hello-world/blob/master/Hyperlink_wMetro_NIH.jpg?raw=true"alt="Heatmap" width="806" height="720">-->
+                            </figure>
+                            <!-- RR testing right align of bars -->
+                        </td>
+                        <td width=50% valign=top>
+
+
+                            <div class="w3-dropdown-hover">
+                                <button class="w3-button buttondropdown w3-dark-gray">Select Area</button>
+                                <div class="w3-dropdown-content buttondropdown w3-bar w3-border">
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE1')">1, 2 & 9 Bethesda & NIH, MD</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE2')">3 & 8 Rockville, MD</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE3')">4 Woodley Park & Van Ness, DC</button>
+                                   <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE4')">5 Chevy Chase, MD</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE5')">7 Adam's Morgean & Columbia Heights, DC</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE6')">10 & 12 Gaithesburg/ North Potomac & Germantown, MD</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE7')">11 & 18 Silver Spring, MD</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE8')">13 Tenleytown, DC</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE9')">14 Potomac, MD</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE10')">15 & 17 Shady Grove, MD</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE11')">16 Kensington, MD</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE12')">19 Downtown, DC</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE13')">21 Aspen Hill, MD</button>
+                                    <button class="w3-bar-item w3-button buttondropdown" onclick="openCity('PLACE14')">22, Capitol Heights, DC</button>
+                                </div>
+                            </div>
+
+
+
+                            <div id="PLACE1" class="w3-container city #fefbf5" style="display:none">
+                                <h2>Bethesda & NIH</h2>
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~60 min.</p>
+                                        <p>Metro Rail – 40 min</p>
+                                        <p>Driving – 30 min</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> #####
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> #####
+
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE2" class="w3-container city w3-light-gray" style="display:none">
+                                <h2>Rockville</h2>
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~60 min .</p>
+                                        <p>NCI shuttle – 30 minutes</p>
+                                        <p>Metro Rail – 20 minutes</p>
+                                        <p>Metro Bus – ??40 minutes ??</p>
+                                        <p>Driving – 15-30 minutes</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> rent per month: $1500-2,700
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> Home to some of the top-ranked high schools in the US: Thomas S. Wootton HS and Richard Montgomery HS. Amenities in town centre: frequent community events, diverse selection of restaurants/cafes/shops,
+                                        has Rockville Library, has a movie theater across the street, ice skating rink + Christmas tree during fall/winter, looks pretty at night. Has an annual Hometown Holidays event for Memorial Day weekend. RIO Washingtonian Center:
+                                        has many restaurants and shops (including Target, Barnes & Noble, Kohl’s, etc.), a movie theater, a lake (with paddleboats), train for kids, small carousel, walking path, playground (also tons of Pokestops) Rockville Swim and
+                                        Fitness Center, Michael & Son Sportsplex at Rockville, Rockville Ice Arena, Lakeforest Mall. Other than these, not much of a nightlife scene in the suburbs!
+                                    </p>
+                                </body>
+
+
+                            </div>
+
+                            <div id="PLACE3" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~30 min </p>
+                                        <p>Metro Rail – ~20 min </p>
+                                        <p>Driving – 15 min</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> 1 bedroom: 1 BR from $1200-$2500/month
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> Right by Rock Creek Park. Food shopping is very convenient and easily accessible on foot, with a few grocery stores in the area. There are a few cafes and restaurants in Van Ness, but there are many
+                                        cafes, local bars, restaurants in Cleveland Park to the south, Tenleytown to the west, and Chevy Chase to the north, all of which are 10-15min walkin distance. The area is relatively quiet and low key, with few venues for night
+                                        life. But livelier neighborhhods are easily accessible by many bus lines or a quick metro ride.
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+
+                            <div id="PLACE4" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~20 min </p>
+                                        <p>Metro Rail – N/A </p>
+                                        <p>Metro Bus – ~20 minutes.</p>
+                                        <p>Driving – 10 min</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> 1 bedroom: 1 BR from $1200-$2500/month.
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> Food shopping is very convenient, with many large markets and smaller specialty markets in the area, easily reached on foot. There are many restaurants, along with many other stores, including several
+                                        up-scale department stores such as Neiman-Marcus, Saks, Lord and Taylor and Bloomingdales. There are two movie theaters. The downside is that the area is mostly family-oriented, with fewer venues for night life.
+
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE5" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~60 min </p>
+                                        <p>Metro Rail – ~35 min (20 min walk)</p>
+                                        <p>Metro Bus – ~1h20 minutes.</p>
+                                        <p>Driving – 30 min</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> 1 bedroom: $1,500-$3,000.
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> Very fun area! Great nightlife, plenty of bars, restaurants and shops.
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE6" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~1h20 min </p>
+                                        <p>Metro Rail – ~45-60 min </p>
+                                        <p>Metro Bus – ~45-60 min </p>
+                                        <p>Driving – 40-50 min</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> 1 bedroom: $1,500 - $1,700 (650 – 1100 square feet) 2 bedroom: $1,600 - $2,300 (1050 – 1550 square feet).
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> More of a family oriented community so very little nightlife. Things of interest: Bohrer Park,Indoor Aquatic Center, RIO Washington Center: shops, dining & special events, Kentlands: shops & dining.
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE7" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~20 min via capital crescent trail.</p>
+                                        <p>Metro Rail – ~60 minutes (indirect route!)</p>
+                                        <p>Metro Bus – ~20 minutes.</p>
+                                        <p>Driving – (5 min)</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> $1600-1800 for 1BR apartment rental. Try Trulia or Zillow for larger listings or Craigslist for smaller by-owner rentals.
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> Amenities: Downtown Silver Spring has a good collection of restaurants, shops and markets (Safeway, Giant, Whole Foods) and is reasonably walkable if you live downtown. On the weekends there is a nice
+                                        farmer’s market and many other vendors on Ellsworth Avenue. There is a great new library downtown as well. Some areas of southern Silver Spring near East-West Highway (MD 410) have access to Rock Creek Park, a huge wooded park
+                                        in the midst of DC and the suburbs, which is my favorite thing about living here. There are several smaller parks and playgrounds around the city. Unless you live within a few square miles of downtown you probably want to have
+                                        a car to live in Silver Spring.
+                                        <p><strong>Summary: </strong> More affordable than Bethesda, but generally more suburban than neighborhoods in DC with red line metro access to NIH campus.</p>
+
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE8" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~35 min.</p>
+                                        <p>Metro Rail – ~20 minutes</p>
+                                        <p>Driving – 20 min</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> #####
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> #####
+
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE9" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~50 min.</p>
+                                        <p>Metro Bus – ~1h20 minutes</p>
+                                        <p>Driving – 15 min</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> #####
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> #####
+
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE10" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~1h10 min.</p>
+                                        <p>Metro Rail – ~1h10 min</p>
+                                        <p>Driving – 30 min (off peak) – 1hr (peak)</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> 1 bed ~1,600, 2 bed ~1,900
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> Groceries and Dining within walking distance, other shops within driving distance.
+
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE11" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~##### min.</p>
+                                        <p>Metro Rail – ##### min</p>
+                                        <p>Driving – #####</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> #####
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> #####
+
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE12" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~60 min.</p>
+                                        <p>Metro Rail – 40 min</p>
+                                        <p>Driving – 30 min</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> #####
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> #####
+
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE13" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~60 min.</p>
+                                        <p>Metro Rail – 45-60 min</p>
+                                        <p>Metro Bus – 45-60 min</p>
+                                        <p>Driving – 20 min</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> 1br: $1,125-$1,360 -2br: $1,300-$1,700
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> Pros: Family and Dog-friendly neighborhood. They have no problem with us having 2, 90+lb dogs! It’s not in the main City so you get some peace. Cons: The Commute. If you want to be in the bustle of
+                                        the City this is not the place for you.
+
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                            <div id="PLACE14" class="w3-container city w3-light-gray" style="display:none">
+
+                                <body>
+                                    <p>
+                                        <strong>Commute:</strong>
+                                        <p>Biking – ~1h30 min.</p>
+                                        <p>Metro Rail – 60 min</p>
+                                        <p>Driving – -60 min</p>
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Example Apartment prices:</strong> Row houses and lots of new condo buildings! (~1200 for a shared room, ~1800 for single room, ~2300 for 2 bed). Generally expensive!
+                                    </p>
+                                </body>
+
+                                <body>
+                                    <p>
+                                        <strong>Living:</strong> Plenty of shops, groceries, amenities, bars and cafes around H-street, Union Market and Eastern Market.
+                                    </p>
+                                    <p>
+                                        <strong>Summary:</strong> Great place to live for access to central DC and nightlife, though expensive and long commute in!
+                                    </p>
+                                </body>
+
+                            </div>
+
+
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+            <!-- acc div close -->
 <body>
-  <p>
-    Societies at the NIH still use archaic listservs to communicate (expect a lot of spam), but some clubs have information buried within here: <a href="http://govemployee.com/nih/">http://govemployee.com/nih/</a>  (also offers discounts, and on-site gym membership)
-    Typically, the best thing to do is ask around, feel free to contact us if you’re interested in a particular club.</p>
-    <h4>Fellow-L</h4>
-    Socials and stuff: Sign up by emailing listserv _at_ list.nih.gov with 'Subscribe FELLOW-L' (without quotes) in the body of the message.
-        <p>Fellows Advisory Committee: We’re committed to helping all NHLBI fellows have a fulfilling experience here, and any contributions are always welcome and join the team!
-  </p><h4>Online NIH Talks: </h4>
-    <p><a href="https://videocast.nih.gov/">https://videocast.nih.gov/</a></p>
-    <p><a href="https://calendar.nih.gov/app/MCalWelcome.aspx">https://calendar.nih.gov/app/MCalWelcome.aspx</a></p>
+  <h1> Meet the fellows! </h1>
+            <table width=100% bgcolor="#f28c8c">
+            <tr><td width=25% align=center>
+            <div class="w3-content w3-display-container">
 
+            <div class="w3-display-container mySlides">
+              <img src="FAC1.png" style="min-width:15%">
+
+            </div>
+
+            <div class="w3-display-container mySlides">
+              <img src="FAC2.png" style="min-width:15%">
+
+            </div>
+
+            <div class="w3-display-container mySlides">
+              <img src="FAC3.png" style="min-width:15%">
+
+            </div>
+
+            <div class="w3-display-container mySlides">
+              <img src="FAC4.png" style="min-width:15%">
+
+            </div>
+
+            <div class="w3-display-container mySlides">
+              <img src="FAC5.png" style="min-width:15%">
+
+            </div>
+
+            <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+            </div>
+          </td><td width=75% valign=top>
+            <div class="w3-container mySlides2">
+                <h2>Raj</h2>
+                <h3>Cardiovascular Interventions Program</h3>
+                <p>I'm a second year postdoc.. working on yadda yadda</p>
+                <p>I found this really useful when I came..  </p>
+                <p>I live in downtown DC, which is fun.. but..   </p>
+            </div>
+            <div class="w3-container mySlides2">
+              <h2>Debbie</h2>
+              <h3>ABC123 Center</h3>
+              <p>I'm a second year postdoc.. working on yadda yadda</p>
+              <p>I found this really useful when I came..  </p>
+
+            </div>
+            <div class="w3-container mySlides2">
+              <h2>Adam</h2>
+              <h3>Biosomething Biosomething Center </h3>
+              <p>I'm a third year postdoc.. working on yadda yadda</p>
+              <p>I found this really useful when I came..  </p>
+              <p>I live in downtown DC, which is fun.. but..   </p>
+            </div>
+            <div class="w3-container mySlides2">
+              <h2>Elizabeth</h2>
+              <h3>ZYX</h3>
+              <p>I'm a fourth year postdoc.. working on yadda yadda</p>
+              <p>I found this really useful when I came..  </p>
+              <p>I live in Rockville, which is fun.. but..   </p>
+            </div>
+            <div class="w3-container mySlides2">
+              <h2>Teagan</h2>
+              <h3>ABC</h3>
+              <p>I'm a fifth year postdoc.. working on yadda yadda</p>
+              <p>I found this really useful when I came..  </p>
+              <p>I live in Bethesda, which is fun.. but..   </p>
+            </div>
+
+            </td></tr>
+            </table>
 </body>
-</div>
+            <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
 
-<body>
-<div id='map'></div>
-<script>
-var FD;
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
 
-function highlightFeature(e){
-  var layer = e.target;
-  layer.setStyle(
-    {
-      weight : 5,
-      color : 'black',
-      fillColor : 'white',
-      fillOpacity : 0.2
-    }
-  );
-  if(!L.Browser.ie && !L.Browser.opera){
-    layer.bringToFront();
-  }
-  info.update(layer.feature.properties);
-}
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              var y = document.getElementsByClassName("mySlides2");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";
+                 y[i].style.display = "none";
+              }
+              x[slideIndex-1].style.display = "block";
+              y[slideIndex-1].style.display = "block";
+            }
+            </script>
 
-function resetHighlight(e){
-  FD.resetStyle(e.target);
-  info.update();
-}
+            <body>
+                <h2>Thanks!</h2> NHLBI FAC team, June 2017
+            </body>
 
-function zoomToFeature(e){
-  map.fitBounds(e.target.getBounds());
-}
+            <script>
+                function openTabRR(cityName) {
+                    var i;
+                    var x = document.getElementsByClassName("tabRR");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                }
+            </script>
 
-function onEachFeature_RR(feature,layer){
-  layer.on(
-    {
-      mouseover : highlightFeature,
-      mouseout : resetHighlight,
-      click : zoomToFeature
-    }
-  );
-}
+            <script>
+                function openCity(cityName) {
+                    var i;
+                    var x = document.getElementsByClassName("city");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                }
+            </script>
 
-function getCommuteColor(comEst){
-var a = Math.floor(255 - 255*comEst/250);
-//var a = Math.floor(255*comEst/60);
-var str1 = "rgb(255,";
-var str2 = a.toString();
-str1 = str1.concat(str2);
-str2 = ",255)";
-str1 = str1.concat(str2);
-  return str1;
-}
+    </body>
+    <!-- whole page bidy-->
 
-function getCommuteColor2(comEst){
-var a = Math.floor(255 - 255*comEst/250);
-var str1 = "rgb(";
-var str2 = a.toString();
-str1 = str1.concat(str2);
-str1 = str1.concat(",");
-str1 = str1.concat(str2);
-str2 = ",255)";
-str1 = str1.concat(str2);
-  return str1;
-}
 
-function commuteStyle(feature){
-  return{
-    fillColor : getCommuteColor2(feature.properties.fac_FELLOW_NUM),
-    //fillColor : getCommuteColor(feature.properties.Commute),
-    weight : 2,
-    opacity : 1,
-    color: 'white',
-    dashArray : 3,
-    fillOpacity : 0.7
-  }
-}
 
-function metroStyle(feature){
-  return{
-    weight : 2,
-    opacity : 1,
-    color: feature.properties.NAME
-  }
-}
 
-var map = L.map('map').setView([39.035,-77.1], 11);
-map.options.minZoom=10;
-
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-  maxZoom: 18,
-  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-    'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-  id: 'mapbox.streets'
-}).addTo(map);
-
-var NIHmarker = L.marker([39.0033, - 77.0977]).addTo(map);
-NIHmarker.bindPopup("<b>NIH Main Campus</b>").openPopup();
-
-FD = L.geoJSON(
-  Fellowsdata,
-{
-  style:commuteStyle,
-  onEachFeature : onEachFeature_RR
-}).addTo(map);
-
-var mD = L.geoJSON(
-  metroData,
-{
-  style:metroStyle
-}).addTo(map);
-
-// control that shows state info on hover
-var info = L.control();
-
-info.onAdd = function (map) {
-  this._div = L.DomUtil.create('div', 'info');
-  this.update();
-  return this._div;
-};
-
-info.update = function (props) {
-//console.log(props.AREA);
-  this._div.innerHTML = '<h4>INFO</h4>' +
-  (props ?
-    '<b>' + 'Area: ' + props.AREA + '</b><br />'
-  + 'Num of fellows: ' + props.fac_FELLOW_NUM + '<br />'
-//  + 'Commute Time: ' + props.Commute + '<br />'
-  + 'ZIP CODE: ' + props.ZCTA5CE10
-    : 'Hover over an area');
-};
-
-info.addTo(map);
-
-</script>
-
-  <script>
-function openCity(cityName) {
-    var i;
-    var x = document.getElementsByClassName("city");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    document.getElementById(cityName).style.display = "block";
-}
-</script>
-</body>
 </html>
