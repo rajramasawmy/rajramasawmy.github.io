@@ -1,3 +1,15 @@
+/* Main styles */
+
+@import url('https://rsms.me/inter/inter.css');
+html {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
 svg {
     width: 300px;
     height: 100px;
@@ -9,22 +21,47 @@ path {
     stroke-linecap: round;
     fill: none;
 }
-body {
+header {
     background-color: #999999;
+    padding: 24px;
 }
+
+nav {
+    justify-content: space-between;
+}
+
+header a {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 24px;
+    color: white;
+}
+
+body {
+    background-color: #eeeeee;
+    
+}
+
+section {
+    display: flex;
+}
+
 h1 {
     font-size: 24px;
 }
 
-text {
-    font-family: monospace;
+div {
+    max-width: 500px;
+    justify-content: space-evenly;
 }
 
 footer {
     background-color: #222222;
     color: white;
+    padding: 24px;
 }
 
 footer a {
     color:  white;
+    
 }
