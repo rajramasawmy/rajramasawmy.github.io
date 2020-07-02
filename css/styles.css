@@ -1,0 +1,30 @@
+svg {
+    width: 300px;
+    height: 100px;
+}
+
+path {
+    stroke: #222222;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    fill: none;
+}
+body {
+    background-color: #999999;
+}
+h1 {
+    font-size: 24px;
+}
+
+text {
+    font-family: monospace;
+}
+
+footer {
+    background-color: #222222;
+    color: white;
+}
+
+footer a {
+    color:  white;
+}
