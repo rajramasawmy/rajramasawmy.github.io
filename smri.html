@@ -4,56 +4,198 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/styles.css">
 
-<header> 
+<header>
 
     rajramasawmy.github.io
     <nav>
-        <a href="index.html" >home</a> //
-        <a href="mri.html" >mri</a> //
-        <a href="smri.html" >sustainable-mri</a> //
-        <a href="scratch.html" >scratch</a> //
+        <a href="index.html">home</a> //
+        <a href="mri.html">mri</a> //
+        <a href="smri.html">sustainable-mri</a> //
+        <a href="scratch.html">scratch</a> //
     </nav>
 
 </header>
 
 <body>
+    <h1>sustainable-mri</h1>
 
-    <div>
-        <h1>sustainable-mri</h1>
-
-        <h2>ISMRM footprint estimate: </h2>
-        Some heavy approximations, see methods below.
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'lowfield')" id="defaultOpen"> Environmental Impact: Low Field
+            MRI</button>
+        <button class="tablinks" onclick="openTab(event, 'footprint')">ISMRM Footprint</button>
     </div>
 
-    <section>
+    <div id="lowfield" class="tabcontent">
+        <h2>Environmental Impact: Low Field MRI </h2>
 
-        <iframe width="630.011" height="389.5559249214524" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubchart?oid=165925231&amp;format=interactive"></iframe>
-    
-    </section>
-    
-    <section>
-    
-        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubchart?oid=122167291&amp;format=interactive"></iframe>
-        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubchart?oid=407620344&amp;format=interactive"></iframe>
-        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubchart?oid=1295665872&amp;format=interactive"></iframe>
+        <p> Junior Fellows Symposium, ISMRM 2020. </p>
+        <p> Methods, sources and data from the talk. </p>
 
-    </section>
+        <div>
+            <h3> Annual sales </h3>
 
-    <div>
-        <h2>Methods</h2>
-        Numbers taken from 2018 Plenary lecture, percentage region memberships estimated from charts in lecture.
-        Region "central" locations have been included on the graphs.
-        CO2 emissions aviation = 328g/per person per km (estimated from British Airways CO2e report).
-        Inter-location distances as determined by https://www.freemaptools.com/how-far-is-it-between.htm (beware the
-        clickbait)
+            <h4> Number sold </h4>
+            <p> <a href="https://data.oecd.org/healtheqt/magnetic-resonance-imaging-mri-units.htm">OECD</a> data does not
+                include all countries (particularly India and China) </p>
+            <p> World bank population <a href="https://data.worldbank.org/indicator/SP.POP.TOTL">data</a></p>
+
+            <iframe width="800" height="400"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubhtml?gid=2039338938&amp;single=true&amp;widget=true&amp;headers=false&amp;range=B21:L64"></iframe>
+
+            <p>So, this dataset is incomplete, but from this:
+            <p>- we can use the USA's number as a rough guide. From [source], the US forms ~20% of the global market, thus
+                taking the last four years (2014-2018) we can estimate a rate of XXX scanners per year sold in the US, and
+                thus a <b>global rate of XXX scanners per year</b>. </p>
+            <p>- we can fit a growth rate of X%, which is similar to [1] and [2]'s estimates of 5% growth.</p>
+            </p>
+
+            <h4> Field Distribution </h4>
+
+            <h3> MRI Scanner Ingredients </h3>
+
+            <h3> Market Growth </h3>
+        </div>
+        
+        <div>
+        <h3> Helium Supply </h3>
+            <p> 20% of the world's helium supply is used for MRI (30% in USA, 12 million m^3).</p>
+            <p>
+                The sustainability of helium supplies fluctuates a lot! Seemingly people (or.. one person who does a lot of interviews) are less worried now.
+                Essentially, the US produces enough helium for its own use and export from its natural gas extraction, and other sources
+                world wide are assumed to be sufficient. The main issue is that limited suppliers can cause price instability and
+                limited availability .
+            </p>
+            <p>
+                The Federal Reserve, operated by the US Bureau of Land Management (#BLM), used to stockpile Helium, but has been selling off its reserves as its no longer considered necessary to store (and is non-trivial) and can produce enough for its short term domestic supply. 
+                The USA produces a lot of Helium from natural gas extraction. The Federal Reserve did supply approximately 42% of the US's demand
+                and 35% of global demand of crude Helium (2013, <a href="https://www.doi.gov/ocl/hearings/113/americasheliumsupply_071113">https://www.doi.gov/ocl/hearings/113/americasheliumsupply_071113</a> ).
+            </p>
+            <p>
+                More sources of Helium globally are expected from Qatar, Algeria and Russia - though there may be still be
+                fluctuations in global prices as these are being developed.
+            </p>
+            <p class="bold"> Estimated world supply: </p>
+            <p> 31.3 billion m^3 (r.o.w.) + 3.9 billion m^3 (u.s.a.)</p>
+            
+            <p> 
+            <a href="https://pubs.usgs.gov/periodicals/mcs2020/mcs2020-helium.pdf"> USGS Helium Report</a>
+            So.. if the US is ~1/5 of the global MRI users.. and so global MRI Helium usage is ~(12*5=) 60 m^3/year... so
+            ~36 b/60 m = 600 years... 200 if 1/3 of Helium usage is MRI.. I think we are good?
+            </p>
+            <p> Party balloons are ~10% of Helium use ; D </p>
+        </div>
+
+        <h3> Magnets </h3>
+
+        <p class="bold"> MRI main field Magnets: </p>
+        <p> <a href="https://afni.nimh.nih.gov/sscc/staff/rwcox/ISMRM_2006/ISMRM%20M-F%202006/files/TuA_08.pdf">J.
+                Overweg</a>
+            MRI
+            main field magnets. ISMRM, 2006.
+        </p>
+
+        <p class="bold"> Low-cost and portable MRI: </p>
+        <p> <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jmri.26942"> LL. Wald, et al.</a> Low‐cost and
+            portable
+            MRI. JMRI, 2019. </p>
+
+        <p class="bold"> Energy efficiency: </p>
+        <p>
+            <a
+                href="https://cocir.org/fileadmin/6_Initiatives_SRI/SRI_Status_Report/pe_international_-_improvement_potentials_for_mri.pdf">COCIR</a>
+            - Magnetic Resonance Equipment (MRI) - Study on the potential for environmental improvement by the aspect of
+            energy
+            efficiency (2012)
+        </p>
+
+
     </div>
+
+    <div id="footprint" class="tabcontent">
+        <div class="divtext">
+
+
+            <h2>ISMRM footprint estimate </h2>
+            <p>
+                Some heavy approximations, see methods below.
+                Esimating travel to the last two year's ISMRM conference, and the prospective conference in Sydney.
+            </p>
+
+            <h2>Methods</h2>
+            <p> Numbers taken from 2018 Plenary lecture, percentage region memberships estimated from charts in lecture.
+                Region "central" locations have been included on the graphs.
+                CO2 emissions aviation = 328g/per person per km (estimated from British Airways CO2e report).
+                Inter-location distances as determined by https://www.freemaptools.com/how-far-is-it-between.htm (beware
+                the
+                clickbait) and choosing a central location for each region:
+                <li>Nebraska (North America)</li>
+                <li>Munich (Europe)</li>
+                <li>Hong Kong (Asia & Pacific)</li>
+                <li>Adelaide (Aus and NZ)</li>
+                <li>Manaus (Mexico & South America)</li>
+                <li>Addis Ababa (Rest of the world)</li>
+            </p>
+
+        </div>
+
+        <section>
+            <h2>Results: Total Emissions</h2>
+            <li> 2018 - 11814 tonnes CO2</li>
+            <li> 2019 - 10830 tonnes CO2</li>
+            <li> 2020 - 26392 tonnes CO2</li>
+
+            <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubchart?oid=165925231&amp;format=interactive"></iframe>
+
+        </section>
+
+        <section class="graphs">
+            <h2>Results: Relative Emissions</h2>
+
+            <div> <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubchart?oid=122167291&amp;format=interactive"></iframe>
+            </div>
+            <div> <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubchart?oid=407620344&amp;format=interactive"></iframe>
+            </div>
+            <div> <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubchart?oid=1295665872&amp;format=interactive"></iframe>
+            </div>
+
+        </section>
+    </div>
+
 
 </body>
 
 <footer>
-    July 2020 
+    July 2020
 </footer>
+<script>
+    function openTab(evt, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
 
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+<script>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
 </script>
 
 </html>
