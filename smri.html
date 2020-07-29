@@ -39,21 +39,37 @@
                 include all countries (particularly India and China) </p>
             <p> World bank population <a href="https://data.worldbank.org/indicator/SP.POP.TOTL">data</a></p>
 
+            <div>
             <iframe width="800" height="400"
                 src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubhtml?gid=2039338938&amp;single=true&amp;widget=true&amp;headers=false&amp;range=B21:L64"></iframe>
+            </div>
 
             <p>So, this dataset is incomplete, but from this:
-            <p>- we can use the USA's number as a rough guide. From [source], the US forms ~20% of the global market, thus
-                taking the last four years (2014-2018) we can estimate a rate of XXX scanners per year sold in the US, and
-                thus a <b>global rate of XXX scanners per year</b>. </p>
-            <p>- we can fit a growth rate of X%, which is similar to [1] and [2]'s estimates of 5% growth.</p>
+            <p>- we can use the USA's number as a rough guide. From [source], the US forms ~20% of the global market (a 2019 market
+                size of $1.5/5B for <a
+                    href="https://www.fortunebusinessinsights.com/industry-reports/magnetic-resonance-imaging-mri-equipment-market-100087">
+                    [1, grandviewresearch] North America</a> / <a
+                    href="https://www.grandviewresearch.com/industry-analysis/magnetic-resonance-imaging-market"> [2,
+                    fortunebusinessinsights] global</a> ), thus
+                taking the last ten years (2009-2018) we can estimate a rate of 350 scanners per year sold in the US, and
+                thus a <b>global rate of 1750 scanners per year</b>. (From the data table, for the countries listed, gives ~1250
+                scanners/year) </p>
+            <p> Just for more estimates, <a
+                    href="https://www.magnetic-resonance.org/ch/21-01.html#:~:text=Worldwide%2C%20there%20are%20approximately%2050%2C000,are%20being%20replaced%20or%20refitted.">Magnetic-resonance.org</a>
+                estimate 5000/year! </p>
+            <p>- we can fit a growth rate of 5.6%, which is similar to [1] and [2]'s estimates of 5% growth.</p>
             </p>
 
             <h4> Field Distribution </h4>
+            Numbers taken from some <a href="">market research</a>  (approxed from the freely available numbers) and <a href="">magnetic-resonance.org </a>
+            <div>
+            <iframe width="400" height="200"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubhtml?gid=2039338938&amp;single=true&amp;widget=true&amp;headers=false&amp;range=B2:E5"></iframe>
+            </div>
 
             <h3> MRI Scanner Ingredients </h3>
-
-            <h3> Market Growth </h3>
+                Pulled from this <a href="https://www.cocir.org/fileadmin/6_Initiatives_SRI/Annual_forum/COCIR_SRI_-_Annual_Forum_2019_v2.pdf">pdf</a>.
+            
         </div>
         
         <div>
@@ -90,9 +106,15 @@
         <p class="bold"> MRI main field Magnets: </p>
         <p> <a href="https://afni.nimh.nih.gov/sscc/staff/rwcox/ISMRM_2006/ISMRM%20M-F%202006/files/TuA_08.pdf">J.
                 Overweg</a>
-            MRI
-            main field magnets. ISMRM, 2006.
+            MRI main field magnets. ISMRM, 2006.
         </p>
+        <p> A lecture from ISMRM also includes the Biot-Savart eq for estimating windings: </p>
+        <p> NumWindings = Field(T)*Radius(m)*2/mu_0(T.m/A)*I(A) </p>
+        <p> For a Radius of 0.6m, a current of 300A and mu_0 given by 1.256637E-6 T.m/A: </p>
+        <div>
+            <iframe width="400" height="300"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubhtml?gid=2039338938&amp;single=true&amp;widget=true&amp;headers=false&amp;range=J7:M15"></iframe>
+        </div>
 
         <p class="bold"> Low-cost and portable MRI: </p>
         <p> <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/jmri.26942"> LL. Wald, et al.</a> Low‐cost and
@@ -143,7 +165,7 @@
             <li> 2018 - 11814 tonnes CO2</li>
             <li> 2019 - 10830 tonnes CO2</li>
             <li> 2020 - 26392 tonnes CO2</li>
-
+            <br>
             <iframe width="600" height="371" seamless frameborder="0" scrolling="no"
                 src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRj7hEEyfwqJR2XyOa7SDDPxKlE3y0O_I5HaKaLMuTqD9Bjw53EqkqsfAZYgQ5KRERzkiec0EhKPU1-/pubchart?oid=165925231&amp;format=interactive"></iframe>
 
